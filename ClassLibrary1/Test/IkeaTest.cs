@@ -22,7 +22,14 @@ namespace ClassLibrary1.Test
                 .IdetiIPirkiniuKrepseli()
                 .PerziuretiPirkiniuKrepseli()                
                 .PatikrintiRezultata(result);
-
+        }
+        [TestCase(TestName = "Dvigulių lovų rėmai")]
+        public static void PrekeKrepseli(string result)
+        {
+            basePage.Ikea()
+                .IsskleistiPrekiuJuosta()
+                .PasirinktiDviguluLovuRemai()
+                .PatikrintiDviguliuLovuRemaiRezultata(result);
         }
     }
 }

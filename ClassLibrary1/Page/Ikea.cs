@@ -19,7 +19,9 @@ namespace ClassLibrary1.Page
         private IWebElement _pasirinktiPreke => driver.FindElement(By.CssSelector("#contentWrapper > div > div > div.products_list.w-100.d-flex.flex-wrap > div:nth-child(2) > div > div.card-header > a > div.productImg"));
         private IWebElement _paskaustiIPirkiniuKrepselyKlavisa => driver.FindElement(By.ClassName("addToCart btn btn-yellow  btn-block btn-icon text-white"));
         private IWebElement _spaudziamPerziuretiPirkiniuKrepseliKlavisa => driver.FindElement(By.ClassName("goToCart btn btn-yellow  btn-icon text-white"));
-        private IWebElement _gautasRezultatas => driver.FindElement(By.ClassName("#cart > div:nth-child(2) > span:nth-child(1)"));
+        private IWebElement _gautasAnklodesRezultatas => driver.FindElement(By.ClassName("#cart > div:nth-child(2) > span:nth-child(1)"));
+        private IWebElement _pasirinktiDviguliuLovuRemai => driver.FindElement(By.CssSelector("#headerMainToggler > div > div.container.headerMenuProducts > ul > li.headerMenuProducts__menu--item.nav-item.dropdown.productsMenu.show > div > div > div > div.col-lg-9.pl-0.products > a:nth-child(13) > span"));
+        private IWebElement _gautasDviguliuLovuRėmaiRezultatas => driver.FindElement(By.ClassName("display-5 heroTit"));
         public Ikea(IWebDriver webdriver) : base(webdriver) { }
 
         public Ikea IsskleistiPrekiuJuosta()
@@ -66,7 +68,19 @@ namespace ClassLibrary1.Page
         }
         public Ikea PatikrintiRezultata(string result)
         {
-            Assert.AreEqual(result, _gautasRezultatas.GetAttribute("value"), "Prekiu kiekis nesutampa");
+            Assert.AreEqual(result, _gautasAnklodesRezultatas.GetAttribute("value"), "Prekiu kiekis nesutampa");
+
+            return this;
+        }
+        public Ikea PasirinktiDviguluLovuRemai()
+        {
+            _pasirinktiDviguliuLovuRemai.Click();
+
+            return this;
+        }
+        public Ikea PatikrintiDviguliuLovuRemaiRezultata(string result)
+        {
+            Assert.AreEqual(result, _gautasDviguliuLovuRėmaiRezultatas.GetAttribute("value"), "Prekiu kiekis nesutampa");
 
             return this;
         }
