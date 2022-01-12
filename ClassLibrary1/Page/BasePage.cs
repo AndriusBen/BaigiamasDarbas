@@ -10,22 +10,22 @@ namespace ClassLibrary1.Page
 {
     public class BasePage
     {
-        protected static IWebDriver driver;
+        protected static IWebDriver Driver;
 
         public BasePage(IWebDriver webDriver)
         {
-            driver = webDriver;
+            Driver = webDriver;
         }
 
         public WebDriverWait GetWait(int seconds = 5)
         {
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(seconds));
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(seconds));
             return wait;
         }
 
         public void CloseBrowser()
         {
-            driver.Quit();
+            Driver.Quit();
         }
     }
 }

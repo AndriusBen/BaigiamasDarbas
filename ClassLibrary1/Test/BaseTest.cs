@@ -13,29 +13,33 @@ namespace ClassLibrary1.Test
 {
     public class BaseTest
     {
-        protected static IWebDriver driver;
+        protected static IWebDriver Driver;
 
-        public static Ikea basePage;
+        public static IkeaPage basePage;
+        public static PrekiuPaieskaPage prekiuPaieskaPage;
 
         [OneTimeSetUp]
         public static void SetUp()
         {
-            driver = CustomDriver.GetChromeDriver();
+            Driver = CustomDriver.GetChromeDriver();
 
-            basePage = new Ikea(driver);
+            basePage = new IkeaPage(Driver);
+            prekiuPaieskaPage = new PrekiuPaieskaPage(Driver);
         }
 
-        [TearDown]
-        public static void TakeScreeshot()
-        {
-            if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
-                Screenshot.TakeScreenshot(driver);
-        }
+        //[TearDown]
+        //public static void TakeScreeshot()
+        //{
+        //    if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
+        //    {
+        //       Screenshot.TakeScreenshot(driver);
+        //    }                
+        //}
 
         [OneTimeTearDown]
         public static void TearDown()
         {
-            driver.Quit();
+            Driver.Quit();
 
         }
     }

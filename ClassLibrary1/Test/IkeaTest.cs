@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using ClassLibrary1.Page;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1.Test
 {
-    public class IkeaTest
+    public class IkeaTest : BaseTest
     {
-        [TestCase( TestName = "Antklode")]
+        [Test]
         public static void TestSumBlock(string result)
         {
-
-            basePage.Ikea()
+            
+            basePage.IeitiIPuslapi()
                 .IsskleistiPrekiuJuosta()
                 .PasirinktiAntklode()
                 .IsskleistiDydziuFiltra()
@@ -23,12 +24,12 @@ namespace ClassLibrary1.Test
                 .PerziuretiPirkiniuKrepseli()                
                 .PatikrintiRezultata(result);
         }
-        [TestCase(TestName = "Dvigulių lovų rėmai")]
-        public static void PrekeKrepseli(string result)
+        [Test]
+        public static void PrekiuKrepseli(string result)
         {
-            basePage.Ikea()
-                .IsskleistiPrekiuJuosta()
-                .PasirinktiDviguluLovuRemai()
+            basePage.IeitiIPuslapi()
+                .IsskleistiPrekiuJuosta();
+           prekiuPaieskaPage.PasirinktiDviguluLovuRemai()
                 .PatikrintiDviguliuLovuRemaiRezultata(result);
         }
     }

@@ -11,21 +11,21 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1.Tools
 {
-    public class Screenshot
+    class Screenshot
     {
-        
-        public static void TakeScreenshot(IWebDriver driver)
-        {
-            Screenshot screenshot = driver.TakeScreenshot();
-            string screenshotDirectory = Path.GetDirectoryName(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-            string screenshotFolder = Path.Combine(screenshotDirectory, "screenshot");
-            Directory.CreateDirectory(screenshotFolder);
 
-            string screenshotName = $"{TestContext.CurrentContext.Test.Name}_{DateTime.Now:HH_mm_ss}.png";
-            string screenshotPath = Path.Combine(screenshotFolder, screenshotName);
+        //public static void TakeScreenshot(IWebDriver driver)
+        //{
+        //    Screenshot screenshot = driver.TakeScreenshot();
+        //    string screenshotDirectory = Path.GetDirectoryName(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+        //    string screenshotFolder = Path.Combine(screenshotDirectory, "screenshot");
+        //    Directory.CreateDirectory(screenshotFolder);
 
-            screenshot.SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
-        }
+        //    string screenshotName = $"{TestContext.CurrentContext.Test.Name}_{DateTime.Now:HH_mm_ss}.png";
+        //    string screenshotPath = Path.Combine(screenshotFolder, screenshotName);
+
+        //    screenshot.SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
+        //}
 
     }
 }
