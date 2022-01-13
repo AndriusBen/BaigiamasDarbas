@@ -14,18 +14,18 @@ namespace ClassLibrary1.Tools
     class Screenshot
     {
 
-        //public static void TakeScreenshot(IWebDriver driver)
-        //{
-        //    Screenshot screenshot = driver.TakeScreenshot();
-        //    string screenshotDirectory = Path.GetDirectoryName(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-        //    string screenshotFolder = Path.Combine(screenshotDirectory, "screenshot");
-        //    Directory.CreateDirectory(screenshotFolder);
+        public static void TakeScreenshot(IWebDriver driver)
+        {
+            Screenshot screenshot = driver.TakeScreenshot();
+            string screenshotDirectory = Path.GetDirectoryName(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            string screenshotFolder = Path.Combine(screenshotDirectory, "screenshot");
+            Directory.CreateDirectory(screenshotFolder);
 
-        //    string screenshotName = $"{TestContext.CurrentContext.Test.Name}_{DateTime.Now:HH_mm_ss}.png";
-        //    string screenshotPath = Path.Combine(screenshotFolder, screenshotName);
+            string screenshotName = $"{TestContext.CurrentContext.Test.Name}_{DateTime.Now:HH_mm_ss}.png";
+            string screenshotPath = Path.Combine(screenshotFolder, screenshotName);
 
-        //    screenshot.SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
-        //}
+            screenshot.SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
+        }
 
     }
 }

@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1.Page
 {
-    internal class PrekiuPaieskaPage : BasePage
-    {
+     class PrekiuPaieskaPage : BasePage
+     {
         private const string PageAddress = "https://www.ikea.lt/lt";
 
         private IWebElement _pasirinktiMenuProducts => Driver.FindElement(By.Id("navbarDropdownProducts"));       

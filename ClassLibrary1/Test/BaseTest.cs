@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1.Test
 {
-    public class BaseTest
+    class BaseTest
     {
         protected static IWebDriver Driver;
 
@@ -27,14 +27,14 @@ namespace ClassLibrary1.Test
             prekiuPaieskaPage = new PrekiuPaieskaPage(Driver);
         }
 
-        //[TearDown]
-        //public static void TakeScreeshot()
-        //{
-        //    if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
-        //    {
-        //       Screenshot.TakeScreenshot(driver);
-        //    }                
-        //}
+        [TearDown]
+        public static void TakeScreeshot()
+        {
+            if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
+            {
+                Screenshot.TakeScreenshot(Driver);
+            }
+        }
 
         [OneTimeTearDown]
         public static void TearDown()

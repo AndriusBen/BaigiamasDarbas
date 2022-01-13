@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1.Page
 {
-    public class IkeaPage : BasePage
+    class IkeaPage : BasePage
     {
         private const string PageAddress = "https://www.ikea.lt/lt";
 
