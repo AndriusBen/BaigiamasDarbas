@@ -17,6 +17,7 @@ namespace ClassLibrary1.Test
 
         public static IkeaPage basePage;
         public static PrekiuPaieskaPage prekiuPaieskaPage;
+        //public string IspirktuvesPage ispirktuvesPage;
 
         [OneTimeSetUp]
         public static void SetUp()
@@ -25,16 +26,17 @@ namespace ClassLibrary1.Test
 
             basePage = new IkeaPage(Driver);
             prekiuPaieskaPage = new PrekiuPaieskaPage(Driver);
+            //ispirktuvesPage = new IspirktuvesPage(Driver);
         }
 
-        [TearDown]
-        public static void TakeScreeshot()
-        {
-            if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
-            {
-                Screenshot.TakeScreenshot(Driver);
-            }
-        }
+        //[TearDown]
+        //public static void TakeScreeshot()
+        //{
+        //    if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
+        //    {
+        //        Screenshot.TakeScreenshot(Driver);
+        //    }
+        //}
 
         [OneTimeTearDown]
         public static void TearDown()

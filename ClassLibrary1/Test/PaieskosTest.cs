@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1.Test
 {
-    public class PaieskosTest : BaseTest
+    class PaieskosTest : BaseTest
     {
 
         [TestCase("švelnaus uždarymo lankstai", TestName = "švelnaus užarymo lankstai")]
-        public static void PaieskosSkiltis(string paieskosObjektas, string result)
-        {            
-            prekiuPaieskaPage.IeitiIPaieskosPuslapi()
-                .IvedamasIeskomasObjektas(paieskosObjektas)
-                .SpaudziamPaieskosMygtuka()
-                .GaunamasRezultatas(result);
+        public static void PaieskosSkiltis(string ieskomasObjektas, string result)
+        {
+            prekiuPaieskaPage.IeitiIPuslapi();
+                //.IvedamasIeskomasObjektas(ieskomasObjektas)
+                //.SpaudziamPaieskosMygtuka()
+                //.GaunamasRezultatas(result);
 
 
 

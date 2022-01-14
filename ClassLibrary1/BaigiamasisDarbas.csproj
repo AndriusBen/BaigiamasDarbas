@@ -60,6 +60,7 @@
     <Compile Include="Drivers\CustomDriver.cs" />
     <Compile Include="Page\BasePage.cs" />
     <Compile Include="Page\IkeaPage.cs" />
+    <Compile Include="Page\IspirktuvesPage.cs" />
     <Compile Include="Page\PaieskosSkiltisPage.cs" />
     <Compile Include="Page\PrekiuPaieskaPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

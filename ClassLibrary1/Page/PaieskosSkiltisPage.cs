@@ -17,7 +17,7 @@ namespace ClassLibrary1.Page
 
          public PaieskosSkiltisPage(IWebDriver webdriver) : base(webdriver) { }
 
-         public PaieskosSkiltisPage IeitiIPaieskosPuslapi()
+         public PaieskosSkiltisPage IeitiIPuslapi()
          {
             if (Driver.Url != PageAddress)
             {
@@ -47,5 +47,6 @@ namespace ClassLibrary1.Page
 
             return this;
         }
+       
     }
 }

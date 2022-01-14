@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1.Page
 {
-    public class BasePage
+    class BasePage
     {
         protected static IWebDriver Driver;
 
@@ -17,7 +17,7 @@ namespace ClassLibrary1.Page
             Driver = webDriver;
         }
 
-        public WebDriverWait GetWait(int seconds = 5)
+        public WebDriverWait GetWait(int seconds = 20)
         {
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(seconds));
             return wait;
