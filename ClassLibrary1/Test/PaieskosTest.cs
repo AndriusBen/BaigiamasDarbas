@@ -11,7 +11,7 @@ namespace ClassLibrary1.Test
     {
 
         [TestCase("švelnaus uždarymo lankstai", TestName = "švelnaus užarymo lankstai")]
-        public static void PaieskosSkiltis(string ieskomasObjektas, string result)
+        public static void PaieskosSkiltis(string ieskomasObjektas)
         {
             prekiuPaieskaPage.IeitiIPuslapi();
                 //.IvedamasIeskomasObjektas(ieskomasObjektas)

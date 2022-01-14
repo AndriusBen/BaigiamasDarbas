@@ -24,8 +24,8 @@ namespace ClassLibrary1.Test
                 .PerziuretiPirkiniuKrepseli()                
                 .PatikrintiRezultata(result);
         }
-        [Test]
-        public static void PrekiuKrepseli(string result)
+        [TestCase("")]
+        public static void PrekiuKrepseli(string rezult)
         {
             basePage.IeitiIPuslapi()
                 .IsskleistiPrekiuJuosta();
@@ -36,7 +36,7 @@ namespace ClassLibrary1.Test
         public static void Ispirktuves(string result)
         {
             basePage.IeitiIPuslapi();
-            //ispirktuvesPage.
+           // spirktuvesPage.
         } 
     }
 }

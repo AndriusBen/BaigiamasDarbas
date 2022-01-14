@@ -29,9 +29,7 @@ namespace ClassLibrary1
         }
 
         [TestCase("stalas", TestName = "stalas")]
-        //[TestCase("5", "25.5", true, "30", TestName = "5 + 25,5 = -30")]
-        //[TestCase("1.99", "0.959", false, "2.949", TestName = "1,99 + 0,959 = 2,949")]
-        //[TestCase("-1", "-9.99", true, "-10", TestName = "-1 + -9,99 = -10")]
+        
         public static void TestSumBlock(string firstInputValue, string result)
         {
             IWebElement firstInput = _driver.FindElement(By.Id("close-wrapper"));

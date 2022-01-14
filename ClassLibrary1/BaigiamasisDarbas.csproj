@@ -67,7 +67,7 @@
     <Compile Include="Test\BaseTest.cs" />
     <Compile Include="Test\IkeaTest.cs" />
     <Compile Include="Test\PaieskosTest.cs" />
-    <Compile Include="Tools\Screenshot.cs" />
+    <Compile Include="Tools\Screenshot1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
