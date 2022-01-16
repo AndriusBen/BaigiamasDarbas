@@ -11,6 +11,7 @@ namespace ClassLibrary1.Drivers
         Chrome,
         Firefox,       
         Opera,
-        Safari
+        Safari,
+        IncognitoChrome
     }
 }

@@ -11,10 +11,11 @@ namespace ClassLibrary1.Test
     class IkeaTest : BaseTest
     {
         [Test]
-        public static void TestSumBlock(string result)
+        public static void TestSumBlock()
         {
             
             basePage.IeitiIPuslapi()
+                .AcceptCookies()
                 .IsskleistiPrekiuJuosta()
                 .PasirinktiAntklode()
                 .IsskleistiDydziuFiltra()
@@ -22,21 +23,25 @@ namespace ClassLibrary1.Test
                 .PasirinktiPreke()
                 .IdetiIPirkiniuKrepseli()
                 .PerziuretiPirkiniuKrepseli()                
-                .PatikrintiRezultata(result);
-        }
-        [TestCase("")]
-        public static void PrekiuKrepseli(string rezult)
-        {
-            basePage.IeitiIPuslapi()
-                .IsskleistiPrekiuJuosta();
-            prekiuPaieskaPage.PasirinktiDviguluLovuRemai()
-                 .PatikrintiDviguliuLovuRemaiRezultata(result);
+                .PatikrintiRezultata("1");
         }
         [Test]
-        public static void Ispirktuves(string result)
+        public static void PrekiuKrepseli()
         {
-            basePage.IeitiIPuslapi();
-           // spirktuvesPage.
-        } 
+            basePage.IeitiIPuslapi()
+                .AcceptCookies()
+                .IsskleistiPrekiuJuosta();
+            prekiuPaieskaPage.PasirinktiDviguluLovuRemai()
+                 .PatikrintiDviguliuLovuRemaiRezultata("Dvigulių lovų rėmai");
+        }
+        [Test]
+        public static void Ispirktuves()
+        {
+            basePage.IeitiIPuslapi()
+                .AcceptCookies();
+            // .ZiuretiPasiulymusMygtuka()
+            // .PrekesIki10()
+            // .PatikrintiRezultata("Prekės iki 10 €")     
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace ClassLibrary1.Page
         private IWebElement _pasirinktiMenuProducts => Driver.FindElement(By.Id("navbarDropdownProducts"));
         private IWebElement _pasirinktiAntklodes => Driver.FindElement(By.CssSelector("#headerMainToggler > div > div.container.headerMenuProducts > ul > li.headerMenuProducts__menu--item.nav-item.dropdown.productsMenu.show > div > div > div > div.col-lg-9.pl-0.products > a:nth-child(1) > span"));
         private IWebElement _isskleistiDydziuFiltra => Driver.FindElement(By.Id("sizeFilter"));
-        private IWebElement _pazymetiDydis => Driver.FindElement(By.CssSelector("#filterSelectors > div > div > nav > div > div.filterContainerMultiple > div:nth-child(3) > ul > li.basicSizes > ul > li:nth-child(2) > span.icheck.icheck_minimal > div"));
+        private IWebElement _pazymetiDydis => Driver.FindElement(By.CssSelector("#filterSelectors > div > div > nav > div > div.filterContainerMultiple > div:nth-child(3) > ul > li.basicSizes > ul > li:nth-child(1) > span.icheck.icheck_minimal > div"));
         private IWebElement _pasirinktiPreke => Driver.FindElement(By.CssSelector("#contentWrapper > div > div > div.products_list.w-100.d-flex.flex-wrap > div:nth-child(2) > div > div.card-header > a > div.productImg"));
         private IWebElement _paskaustiIPirkiniuKrepselyKlavisa => Driver.FindElement(By.ClassName("addToCart btn btn-yellow  btn-block btn-icon text-white"));
         private IWebElement _spaudziamPerziuretiPirkiniuKrepseliKlavisa => Driver.FindElement(By.ClassName("goToCart btn btn-yellow  btn-icon text-white"));
